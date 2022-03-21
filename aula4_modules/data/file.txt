@@ -1,4 +1,0 @@
-hello world
-Another Line in my file
-Another Line in my file
-Another Line in my file
