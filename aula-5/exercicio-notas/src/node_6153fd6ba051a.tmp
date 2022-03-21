@@ -1,0 +1,32 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+})
+
+function showOptions(){
+        console.log("================");
+        console.log("Choose an option");
+        console.log('-----------------');
+        console.log('(L)ist');
+        console.log('(R)ead');
+        console.log('(C)reate');
+        console.log('(R)emove');
+        console.log('=================');
+}
+
+showOptions();
+
+rl.question('Option:', answer => {
+    console.log('>>', answer);
+
+    switch (answer){
+        case 'l' : console.log('list'); break
+        case 'r' : console.log('read'); break
+        case 'c' : console.log('create'); break
+        case 'r' : console.log('remove'); break
+    }
+
+    rl.close();
+})
