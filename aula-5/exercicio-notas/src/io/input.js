@@ -15,7 +15,7 @@ const userInput = async (message) => {
 }
 
 const alert = async (message, cb) => {
-    const input = await userInput(`${message} (Y/N)`);
+    const input = await userInput(`${message} (y/n)`);
 
     if(input.toLowerCase() === 'y'){
         cb();

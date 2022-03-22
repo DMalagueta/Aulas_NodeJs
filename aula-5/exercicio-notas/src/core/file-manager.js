@@ -10,5 +10,5 @@ module.exports = {
     reader : async (filename) => (await readFile(filePath(filename))).toString(),
     writer : async (filename, content) => await writeFile(filePath(filename), content),
     remove : async (filename) => await unlink(filePath(filename)),
-    list   : async () => readdir(filePath()),
+    list : async () => readdir(filePath()),
 }

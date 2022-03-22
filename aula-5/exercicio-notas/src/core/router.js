@@ -5,7 +5,7 @@ const read = require("../actions/read");
 
 module.exports = (option, cb = null) => {
     switch (option.toUpperCase()) {
-        case 'L': list(); break;
+        case 'L': list(cb); break;
         case 'R': read(cb); break;
         case 'C': create(cb); break;
         case 'D': remove(cb); break;

@@ -40,5 +40,5 @@ const menu = async () => {
 
 const clear = () => exec('clear');
 
-module.exports = {output, line, title, menu}
+module.exports = {output, line, title, menu, clear}
 

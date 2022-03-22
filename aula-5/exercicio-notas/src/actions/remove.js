@@ -7,8 +7,16 @@ module.exports = async (cb = null) => {
 
     const name = await userInput('name: ');
 
-    await alert('Are you sure', async() => {
-        await remove(name);
-        output(`removed sucefullelly ${name}`);
-    })
+    
+        await alert('Are you sure', async() => {
+            try{
+                await remove(name);
+                output(`removed sucefully note ${name}`);
+                cb()
+            }
+            catch{
+                output(`Note ${name} not found`);
+                cb()
+            }
+        });
 }

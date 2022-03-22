@@ -1,8 +1,8 @@
-const { title, output } = require("../io/output");
+const { title, output, clear } = require("../io/output");
 const { userInput, alert } = require("../io/input");
 const { writer } = require("../core/file-manager");
 
-module.exports = async (cb =null) => {
+module.exports = async (cb = null) => {
     title('Create Note')
 
     const name = await userInput('name: ');
