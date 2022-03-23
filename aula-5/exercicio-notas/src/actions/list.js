@@ -2,10 +2,14 @@ const { title, output, clear} = require("../io/output");
 const { list } = require ("../core/file-manager");
 
 module.exports = async (cb = null) => { 
-    title('All notes')
-    const noteList = await list();
-    for (let i = 0; i < noteList.length; i++){
-        output(`${noteList[i]}`);    
+    title('Notes List')
+    const notes = await list();
+    
+    if(notes.length === 0) {
+        output('')
+    } else {
+        notes.forEach((note, index) => output(`${index}\t${note}`));
     }
+
     if (cb) cb();
 }

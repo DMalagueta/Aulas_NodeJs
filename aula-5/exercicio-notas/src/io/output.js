@@ -34,11 +34,12 @@ const menu = async () => {
 
     line(true);
 
+    clear()
     return option;
 
 };
 
-const clear = () => exec('clear');
+const clear = () => console.clear();
 
 module.exports = {output, line, title, menu, clear}
 

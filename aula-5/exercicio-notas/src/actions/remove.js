@@ -19,4 +19,6 @@ module.exports = async (cb = null) => {
                 cb()
             }
         });
+
+    if (cb) cb();
 }
