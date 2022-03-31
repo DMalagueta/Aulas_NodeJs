@@ -1,0 +1,19 @@
+{
+  "name": "njs-contacts-csv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index 5001",
+    "dev": "nodemon src/index 5001"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}
