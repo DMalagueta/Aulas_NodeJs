@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Lista de contactos</title>
+    <style>
+        .buttons{
+            padding: 10px;
+        }
+        .buttons a, button{ 
+            text-decoration: none;
+            color: black;
+            background-color:rgb(182, 182, 182);
+            padding: 5px;
+            height: 35px;
+            border-radius: 5px;
+            border:0;
+            text-align: center;
+        }
+        .buttons a:hover, button:hover{ 
+            color: black;
+            background-color:bisque;
+        }
+
+        button {}
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Contact Manager</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Lista de contactos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/create">Criar Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" action="/search/contact" method="get">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="sname">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+       <div class="container">
+            <div class="card mt-5" style="margin: 0 auto; float: none; width:40vw">
+                <form method="post" action="/edited{{contact.id}}">
+                    <div class="card-header text-center">
+                        Editar contacto
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <input type="text" class="form-control" value="{{contact.name}}" name="name">
+                        </li>
+                        <li class="list-group-item">
+                            <input type="text" class="form-control" value="{{contact.email}}" name="email">
+                        </li>
+                        <li class="list-group-item">
+                            <input type="text" class="form-control" value="{{contact.cellphone}}" name="cellphone">
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <button type='submit'>Aplicar</button>
+                        <a href='/'>Cancelar</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        <footer class="container text-center mt-5">Diogo Malagueta ®2022</footer>
+</body>
+</html>

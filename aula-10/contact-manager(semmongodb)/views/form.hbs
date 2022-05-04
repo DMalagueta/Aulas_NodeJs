@@ -1,0 +1,24 @@
+<form method="post" class="card">
+    <div class="card-header">
+        <h5 class="card-title">Create Contact</h5>
+    </div>
+
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="nameInput" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="nameInput" required autofocus value="{{#with contact}}{{ name }}{{/with}}">
+        </div>
+        <div class="mb-3">
+            <label for="emailInput" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="emailInput" required value="{{#with contact}}{{ email }}{{/with}}">
+        </div>
+        <div class="mb-3">
+            <label for="phoneInput" class="form-label">Phone</label>
+            <input type="tel" class="form-control" name="phone" id="phoneInput" value="{{#with contact}}{{ phone }}{{/with}}">
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-outline-primary">Save</button>
+    </div>
+</form>

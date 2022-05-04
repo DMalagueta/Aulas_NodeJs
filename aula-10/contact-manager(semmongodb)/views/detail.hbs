@@ -1,0 +1,21 @@
+{{#with contact}}
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">{{ name }}</h5>
+        </div>
+        
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <strong>Email</strong> {{ email }}
+            </li>
+            <li class="list-group-item">
+                <strong>Phone</strong> {{ phone }}
+            </li>
+        </ul>
+        
+        <div class="card-footer">
+            <a href="/contacts/{{ id }}/form" class="btn btn-sm btn-outline-primary">Edit</a>
+            <a href="/contacts/{{ id }}/delete" onclick="return confirm('Remove?')" class="btn btn-sm btn-outline-danger">Remove</a>
+        </div>
+    </div>
+{{/with}}
